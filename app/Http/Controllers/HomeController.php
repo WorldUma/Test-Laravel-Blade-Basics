@@ -18,9 +18,8 @@ class HomeController extends Controller
     public function alert()
     {
         $text = '<script>alert("I am a security alert, your task is to remove me.");</script>';
-        $escapedText = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 
-        return view('alert', compact('escapedText'));
+        return view('alert', compact('text'));
     }
 
     // Task 3. Change the View code to show users, or row "No content" if 0 users
